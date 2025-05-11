@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "../style/globals.css";
@@ -27,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
-      <body className={` antialiased`}>
+      <body className={`antialiased`}>
         <MyNavbar />
         <div className="container mx-auto px-10 py-5">{children}</div>
         <Footer />

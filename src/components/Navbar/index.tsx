@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import DarkMode from "../DarkMode";
+import { useRouter } from "next/navigation";
 
 export function MyNavbar() {
   const navItems = [
@@ -62,7 +63,7 @@ export function MyNavbar() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const router = useRouter();
   return (
     <div className="relative w-full">
       <Navbar>
@@ -73,7 +74,12 @@ export function MyNavbar() {
           <div className="flex items-center  gap-4">
             <NavItems className="relative" items={navItems} />
             <DarkMode />
-            <NavbarButton variant="secondary">Login</NavbarButton>
+            <NavbarButton
+              variant="secondary"
+              onClick={() => router.push("/login")}
+            >
+              Login
+            </NavbarButton>
           </div>
         </NavBody>
 

@@ -4,10 +4,15 @@ import Events from "./Events";
 import EventMusic from "./EventsMusic";
 import Faq from "./Faq";
 import LazyLoad from "./LazyLoad";
-
+import { motion } from "framer-motion";
 const Home = () => {
   return (
-    <div className="flex flex-col gap-y-12">
+    <motion.div
+      className="flex flex-col gap-y-12"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <LazyLoad />
       <Agendas title="Event Music">
         <EventMusic />
@@ -17,7 +22,7 @@ const Home = () => {
         <Events />
       </Agendas>
       <Faq />
-    </div>
+    </motion.div>
   );
 };
 export default Home;
