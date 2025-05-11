@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import RegisterForm from "./RegisterForm";
 import LoginForm from "./LoginForm";
 import SwitchButton from "./SwitchButton";
+import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export const LoginPage = () => {
   return <Form />;
@@ -11,9 +13,17 @@ export const LoginPage = () => {
 
 function Form() {
   const [isSignUp, setIsSignUp] = useState(false);
-
+  const router = useRouter();
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 px-4">
+      {/* Tombol Back */}
+      <button
+        onClick={() => router.back()}
+        className="absolute top-4 left-4 z-30 flex items-center gap-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition"
+      >
+        <ArrowLeft className="w-4 h-4" />
+        <span className="text-sm font-medium">Back</span>
+      </button>
       <div className="relative w-full max-w-4xl h-auto lg:h-[500px] bg-white dark:bg-gray-800 rounded-3xl shadow-lg overflow-hidden">
         {/* Panel kiri (desktop only) */}
         <motion.div
@@ -86,12 +96,5 @@ function Form() {
     </div>
   );
 }
-
-
-
-
-
-
-
 
 export default LoginPage;
