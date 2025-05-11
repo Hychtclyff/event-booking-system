@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
+  
 @theme inline {
   --animate-move: move 5s linear infinite;
 
