@@ -4,11 +4,12 @@ import BookingCard from "./BookingCard";
 import DescEvent from "./DescEvent";
 import TimeTableCard from "./TimeTableCard";
 import { ArrowLeft } from "lucide-react";
+import BreadcrumbEvent from "./Breadcrump";
 
 const EventDetail = () => {
   const router = useRouter();
   return (
-    <div className="container mx-auto px-10 grid grid-cols-7 gap-3 ">
+    <div className="container mx-auto px-10 grid grid-cols-7 gap-3 py-3 gap-y-5">
       {/* Tombol Back */}
       <button
         onClick={() => router.back()}
@@ -17,6 +18,7 @@ const EventDetail = () => {
         <ArrowLeft className="w-4 h-4" />
         <span className="text-sm font-medium">Back</span>
       </button>
+      <BreadcrumbEvent />
       <Banner className="col-span-5" />
       <TimeTableCard
         className="col-span-2"

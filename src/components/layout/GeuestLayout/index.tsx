@@ -9,7 +9,7 @@ const GeuestLayout = ({
   return (
     <>
       <NavbarComponents />
-      <div className="container mx-auto px-10 py-5">{children}</div>
+      <div className="container mx-auto px-28 py-5">{children}</div>
       <Footer />
     </>
   );
