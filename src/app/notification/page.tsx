@@ -1,13 +1,13 @@
 "use client";
 
 import GeuestLayout from "@/components/layout/GeuestLayout";
-import Booking from "@/modules/Booking";
+import Notification from "@/modules/notification";
 
-const BookingPage = () => {
+const EventsPage = () => {
   return (
     <GeuestLayout>
-      <Booking />
+      <Notification />
     </GeuestLayout>
   );
 };
-export default BookingPage;
+export default EventsPage;

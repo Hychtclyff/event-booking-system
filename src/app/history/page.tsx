@@ -1,13 +1,13 @@
 "use client";
 
 import GeuestLayout from "@/components/layout/GeuestLayout";
-import Booking from "@/modules/Booking";
+import History from "@/modules/history";
 
-const BookingPage = () => {
+const HistoryPage = () => {
   return (
     <GeuestLayout>
-      <Booking />
+      <History />
     </GeuestLayout>
   );
 };
-export default BookingPage;
+export default HistoryPage;

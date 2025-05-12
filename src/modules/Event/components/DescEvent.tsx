@@ -1,6 +1,7 @@
 import { dummyContent } from "@/common/constants/DumyContents";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 type DescEventProps = {
   className?: string;
@@ -25,7 +26,7 @@ const DescEvent = ({ className }: DescEventProps) => {
 
               <div className="text-sm  prose prose-sm dark:prose-invert">
                 {item?.image && (
-                  <img
+                  <Image
                     src={item.image}
                     alt="blog thumbnail"
                     height="1000"

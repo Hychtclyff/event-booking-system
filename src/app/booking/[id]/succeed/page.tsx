@@ -1,13 +1,13 @@
 "use client";
 
 import GeuestLayout from "@/components/layout/GeuestLayout";
-import Booking from "@/modules/Booking";
+import Succeed from "@/modules/succeed";
 
-const BookingPage = () => {
+const SucceedPage = () => {
   return (
     <GeuestLayout>
-      <Booking />
+      <Succeed />
     </GeuestLayout>
   );
 };
-export default BookingPage;
+export default SucceedPage;

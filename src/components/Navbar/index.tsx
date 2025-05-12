@@ -36,7 +36,7 @@ const NavbarComponents = () => {
           </svg>
         </>
       ),
-      link: "#notif",
+      link: "/notification",
     },
     {
       name: "History",
@@ -58,7 +58,7 @@ const NavbarComponents = () => {
           </svg>
         </>
       ),
-      link: "#history",
+      link: "/history",
     },
   ];
 
