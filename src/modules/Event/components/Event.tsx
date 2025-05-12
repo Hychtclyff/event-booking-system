@@ -1,11 +1,22 @@
+import { useRouter } from "next/navigation";
 import Banner from "./Banner";
 import BookingCard from "./BookingCard";
 import DescEvent from "./DescEvent";
 import TimeTableCard from "./TimeTableCard";
+import { ArrowLeft } from "lucide-react";
 
 const EventDetail = () => {
+  const router = useRouter();
   return (
     <div className="container mx-auto px-10 grid grid-cols-7 gap-3 ">
+      {/* Tombol Back */}
+      <button
+        onClick={() => router.back()}
+        className=" absolute top-4 left-4 z-50 flex items-center gap-1 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition"
+      >
+        <ArrowLeft className="w-4 h-4" />
+        <span className="text-sm font-medium">Back</span>
+      </button>
       <Banner className="col-span-5" />
       <TimeTableCard
         className="col-span-2"

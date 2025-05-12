@@ -14,7 +14,7 @@ import { useState } from "react";
 import DarkMode from "../DarkMode";
 import { useRouter } from "next/navigation";
 
-export function MyNavbar() {
+const NavbarComponents = () => {
   const navItems = [
     {
       name: "Message",
@@ -131,4 +131,6 @@ export function MyNavbar() {
       {/* Navbar */}
     </div>
   );
-}
+};
+
+export default NavbarComponents;

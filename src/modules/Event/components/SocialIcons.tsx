@@ -1,3 +1,4 @@
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Facebook, Twitter, Github, Linkedin } from "lucide-react";
 
 const SocialIcons = () => {
